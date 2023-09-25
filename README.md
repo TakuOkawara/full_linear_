@@ -17,8 +17,8 @@ The main contribution of this factor is two-fold.
 
 We tested this code by Ubuntu 22.04
 
-# How to use
-The full linear wheel odometry factor is implemented as a header-only file. Therefore, you can use this factor by only including this header file in your code. Please refer to the example directory for incorporating this factor into your factor graph defined by GTSAM.
+# Usage
+The full linear wheel odometry factor is implemented as a header-only file. Therefore, you can use this factor by only including this header file in your code. Please refer to the examples directory for incorporating this factor into your factor graph defined by GTSAM.
 
 # Citation
 If you use the full linear wheel odometry factor for academic work, please cite the following publication.
