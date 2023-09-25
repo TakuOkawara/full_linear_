@@ -87,8 +87,8 @@ public:
     // d(error) / d(T_pp_cp)
     gtsam::Matrix66 H_e_dp;
     // d(error) / d(h)
-    gtsam::Matrix66 H_e_deltaLidar;
-    gtsam::Pose3 error = T_pp_cp.between(T_IMU_DeltaIMU, H_e_dp, H_e_deltaLidar);
+    gtsam::Matrix66 H_e_DeltaIMU;
+    gtsam::Pose3 error = T_pp_cp.between(T_IMU_DeltaIMU, H_e_dp, H_e_DeltaIMU);
     // d(log error) / d(error)
     gtsam::Matrix6 H_loge_e;
     // error with logmap (Eq.13 in our paper)
@@ -151,7 +151,7 @@ public:
       gtsam::Matrix66 H_deltaRobot_K;
       H_deltaRobot_K << H_deltaRobot_J11, H_deltaRobot_J12, H_deltaRobot_J21, H_deltaRobot_J22, H_deltaRobot_J31, H_deltaRobot_J32;
       // d(log error) / d(K)
-      *H1 = H_loge_e * H_e_deltaLidar * H_DeltaIMU_DeltaRobot * H_deltaRobot_K;
+      *H1 = H_loge_e * H_e_DeltaIMU * H_DeltaIMU_DeltaRobot * H_deltaRobot_K;
 
     }
 
