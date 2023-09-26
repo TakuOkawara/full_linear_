@@ -26,5 +26,5 @@ make
 ./full_linear_wheel_odometry_factor_example
 ```
 
-# Citation
-If you use the full linear wheel odometry factor for academic work, please cite the following publication.
+<!-- # Citation
+If you use the full linear wheel odometry factor for academic work, please cite the following publication.  -->
